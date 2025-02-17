@@ -360,7 +360,7 @@ header {
     background-color: none;
     color: var(--clr-dark);
     text-align: center;
-    border: 10px dotted var(--clr-dark);
+    /* border: 10px dotted var(--clr-dark); */
 }
 
 .section-title--services {
@@ -450,7 +450,7 @@ header {
     background-color: none;
     color: var(--clr-dark);
     text-align: center;
-    border: 10px dotted var(--clr-dark);
+    /* border: 10px dotted var(--clr-dark); */
 }
 
 .portfolio {
@@ -494,7 +494,7 @@ header {
 
 .contact-me p {
     margin-bottom: 1em;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     span {
         background-color: var(--clr-accent);
