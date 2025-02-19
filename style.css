@@ -174,7 +174,7 @@ header {
 .nav {
     position: fixed;
     background: var(--clr-dark);
-    color: var(--clr-light);
+    color: var(--clr-accent);
     top: 0;
     bottom: 0;
     left: 0;
@@ -264,7 +264,8 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
+    border:1px solid var(--clr-dark);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -310,49 +311,6 @@ header {
     letter-spacing: 0.03em;
 }
 
-@media (min-width: 600px) {
-    .intro {
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 2em;
-        grid-template-areas:
-            "img role"
-            "img title"
-            "img subtitle";
-        grid-template-columns: min-content max-content;
-    }
-
-    .section-role {
-        grid-area: role;
-        text-align: left;
-        margin-bottom: 0;
-        align-self: end;
-    }
-
-    .intro__img {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-        border-radius: 50%;
-    }
-
-    .intro-title {
-        letter-spacing: 0.05em;
-    }
-
-    .section-subtitle--intro {
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 3;
-        text-align: right;
-        position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
-        margin-top: 1em;
-    }
-}
 
 /* My services section */
 
@@ -364,7 +322,7 @@ header {
 }
 
 .section-title--services {
-    color: var(--clr-accent);
+    color: var(--clr-dark);
     position: relative;
 }
 
@@ -398,18 +356,7 @@ header {
     height: 40px;
 }
 
-@media (min-width: 800px) {
-    .services {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
-    .service + .service {
-        margin-left: 2em;
-    }
-}
 
 /* About me section */
 
@@ -423,47 +370,18 @@ header {
     border-radius: 20px;
 }
 
-@media (min-width: 600px) {
-    .about-me {
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas:
-            "title img"
-            "subtitle img"
-            "text img";
-        grid-column-gap: 2em;
-    }
 
-    .section-title--about {
-        grid-area: title;
-    }
-
-    .section-subtitle--about {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
-    }
-
-    .about-me__img {
-        grid-area: img;
-        position: relative;
-        z-index: 2;
-    }
-}
 /* My Work */
 .my-work {
     background-color: var(--color-secondary);
     color: var(--color-light);
     text-align: center;
+    border: 10px dotted var(--clr-dark);
   }
   
   .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Explicit 3-column grid */
+    grid-template-columns: repeat(3, 1fr); 
     grid-gap: 1em;
 
     margin: 0 auto;
@@ -471,15 +389,15 @@ header {
   
   .portfolio__item {
     background-color: var(--color-dark);
-    overflow: hidden; /* Ensures images don't overflow */
+    overflow: hidden; 
   }
   
   .portfolio__img {
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1);
-    width: 100%; /* Ensures images fill the container */
-    display: block; /* Removes extra space below image */
-    height: 100%; /* Make images fill their grid cell */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    width: 100%; 
+    display: block; 
+    height: 100%; 
+    object-fit: cover; 
   
   }
   
@@ -499,20 +417,6 @@ header {
   
   .portfolio__item--wide {
     grid-column: span 2;
-  }
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-    .portfolio {
-      grid-template-columns: 1fr; 
-    }
-  
-    .portfolio__item--tall {
-      grid-row: auto; /* Reset row span */
-    }
-  
-    .portfolio__item--wide {
-      grid-column: auto; /* Reset column span */
-    }
   }
 
 
@@ -553,13 +457,20 @@ header {
     justify-content: center;
     gap: 1.5em;
     margin-bottom: 2em;
+
+    .icons {
+        width: 3em;  
+        height: 3emem;
+        display: block; 
+        padding: 0.5em; 
+    }
+
+    .icons:hover{
+        background-color: var(--clr-accent);
+        border-radius: 20px;
+    }
 }
-.icons {
-    width: 2.5em;  
-    height: 2.5em;
-    display: block; 
-    padding: 0.5em; 
-}
+
 
 .email-link{
     a{
@@ -641,8 +552,14 @@ footer {
     h1{
         letter-spacing: 0.25rem;
     }
-}
+}   
   
+
+@media (max-width :1020px){
+    .my-services,.my-work{
+        border:none;
+    }
+}
 
 @media (max-width: 820px) {
     footer {
@@ -664,5 +581,104 @@ footer {
 
     footer h3 {
         font-size: 1.2rem;
+    }
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .portfolio {
+      grid-template-columns: 1fr; 
+    }
+  
+    .portfolio__item--tall {
+      grid-row: auto;
+    }
+  
+    .portfolio__item--wide {
+      grid-column: auto; 
+    }
+  }
+
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "img role"
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .section-role {
+        grid-area: role;
+        text-align: left;
+        margin-bottom: 0;
+        align-self: end;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+        border-radius: 50%;
+    }
+
+    .intro-title {
+        letter-spacing: 0.05em;
+    }
+
+    .section-subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 3;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+        margin-top: 1em;
+    }
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section-title--about {
+        grid-area: title;
+    }
+
+    .section-subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 }

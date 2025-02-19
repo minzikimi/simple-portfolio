@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minji Kim</title>
-  
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -22,7 +24,7 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                 <li class="nav__item"><a href="#contact" class="nav__link">Contact me</a></li>
@@ -54,36 +56,28 @@
             <div class="services">
                 <div class="service">
                     <h3>User-Focused Front-End Development</h3>
-                    <p>I create intuitive and engaging user interfaces. My background in hospitality allows me to anticipate user needs and deliver exceptional digital experiences.</p>
-                    <p><i class="fab fa-html5 fa-lg"></i> <i class="fab fa-css3-alt fa-lg"></i> <i class="fab fa-js-square fa-lg"></i></p> <!-- Font Awesome icons -->
+                    <p>I create intuitive and engaging user interfaces. My background in hospitality allows me to
+                        anticipate user needs and deliver exceptional digital experiences.</p>
+                        <div class="skills-icons">
+                            <img src="img/html-5.png" class="skills-icon" alt="html-icon">
+                            <img src="img/c-sharp.png" class="skills-icon" alt="c-sharp-icon">
+                            <img src="img/js.png" class="skills-icon" alt="javascript-icon">
+                            <img src="img/css-3.png" class="skills-icon" alt="css-icon">
+                            <img src="img/react.png" class="skills-icon" alt="react-icon">
+                            <p>in training..</p>
+                            <img src="img/nextjs-icon-svgrepo-com.svg" class="skills-icon" alt="next-icon">
+                            <img src="img/typescript-icon-svgrepo-com.svg" class="skills-icon" alt="typescript-icon">
+                            <!-- <img src="img/microsoft-svgrepo-com.svg" class="skills-icon" alt="ms-icon">
+         -->            </div>
                 </div>
 
                 <div class="service">
                     <h3>Adaptable and Eager Learner</h3>
-                    <p>I'm committed to continuous learning and staying up-to-date with the latest front-end technologies, always ready to tackle new challenges.</p>
-                    <p><i class="fas fa-graduation-cap fa-lg"></i> <i class="fas fa-code fa-lg"></i></p> <!-- Font Awesome icons -->
+                    <p>I'm committed to continuous learning and staying up-to-date with the latest front-end
+                        technologies, always ready to tackle new challenges.</p>
+                    <p><i class="fas fa-graduation-cap fa-lg"></i> <i class="fas fa-code fa-lg"></i></p>
                 </div>
             </div>
-
-            <div class="service">
-                <h3>Skills & Technologies</h3>
-                <div class="skills-icons">
-                    <img src="img/html-5.png"class="skills-icon">
-                    <img src="img/c-sharp.png" class="skills-icon">
-                    <img src="img/js.png" class="skills-icon">
-                    <img src="img/css-3.png" class="skills-icon">
-                    <img src="img/react.png" class="skills-icon">
-                    <p>in training..</p>
-                    <img src="img/nextjs-icon-svgrepo-com.svg" class="skills-icon">
-                    <img src="img/typescript-icon-svgrepo-com.svg" class="skills-icon">
-                    <img src="img/microsoft-svgrepo-com.svg" class="skills-icon">
-                
-                </div>
-            </div>
-        </div>
-            </div>
-
-            <a href="#work" class="btn">My Work</a>
         </section>
 
 
@@ -101,96 +95,82 @@
             <img src="img/profile2.jpeg" alt="Jane leaning against a bus" class="about-me__img">
         </section>
 
-   <!-- My Work -->
-<section class="my-work" id="work">
-    <h2 class="section-title section-title--work">My work</h2>
-    <p class="section-subtitle section-subtitle--work">A selection of my range of work</p>
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section-title section-title--work">My work</h2>
+            <p class="section-subtitle section-subtitle--work">A selection of my range of work</p>
 
-    <div class="portfolio">
-        <a href="portfolio-item.html" class="portfolio__item portfolio__item--tall portfolio__item--wide">
-            <img src="img/screenshots/crypto.png" alt="" class="portfolio__img">
-        </a>
-        <a href="portfolio-item.html" class="portfolio__item">
-            <img src="img/screenshots/teamproject.png" alt="" class="portfolio__img">
-            <a href="portfolio-item.html" class="portfolio__item">
-                <img src="img/screenshots/weather-app.png" alt="" class="portfolio__img">
-            </a>
-        </a>
-        <a href="portfolio-item.html" class="portfolio__item portfolio__item--tall portfolio__item--wide">
-            <img src="img/screenshots/ecommerce.png" alt="" class="portfolio__img">
-        </a>
+            <div class="portfolio">
+                <a href="https://hypercrypto.netlify.app"
+                    class="portfolio__item portfolio__item--tall portfolio__item--wide" target="_blank">
+                    <img src="img/screenshots/crypto.png" alt="Crypto App" class="portfolio__img">
+                </a>
+                <a href="https://github.com/minzikimi/speed-refine" class="portfolio__item" target="_blank">
+                    <img src="img/screenshots/teamproject.png" alt="Team Project" class="portfolio__img">
+                </a>
+                <a href="https://minzikimi.github.io/weather-app/" class="portfolio__item" target="_blank">
+                    <img src="img/screenshots/weather-app.png" alt="Weather App" class="portfolio__img">
+                </a>
+                <a href="https://bloom-ecommerce-hi26.netlify.app/"
+                    class="portfolio__item portfolio__item--tall portfolio__item--wide" target="_blank">
+                    <img src="img/screenshots/ecommerce.png" alt="E-commerce App" class="portfolio__img">
+                </a>
 
-        <a href="#" class="portfolio__item">
-            <img src="img/screenshots/signup-form.png" alt="" class="portfolio__img">
-        </a>
+                <a href="#" class="portfolio__item">
+                    <img src="img/screenshots/signup-form.png" alt="Signup Form" class="portfolio__img">
 
-       
+                </a>
 
-        <a href="portfolio-item.html" class="portfolio__item">
-            <img src="img/screenshots/restaurant-page.png" alt="" class="portfolio__img">
-        </a>
 
-        <a href="portfolio-item.html" class="portfolio__item">
-            <img src="img/screenshots/tic-tac-toe.png" alt="" class="portfolio__img">
-        </a>
 
-        <a href="portfolio-item.html" class="portfolio__item">
-            <img src="img/screenshots/dashboard.png" alt="" class="portfolio__img">
-        </a>
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/screenshots/restaurant-page.png" alt="Restaurant Page" class="portfolio__img">
 
-      
-        <a href="#" class="portfolio__item">
-            <img src="img/screenshots/my-chrome-app.png" alt="" class="portfolio__img">
-        </a>
-        <!-- <a href="#" class="portfolio__item">
-            <img src="img/screenshots/library.png" alt="" class="portfolio__img">
-        </a>
-        <a href="#" class="portfolio__item">
-            <img src="img/screenshots/quiz.png" alt="" class="portfolio__img">
-        </a>
-        <a href="#" class="portfolio__item">
-            <img src="img/screenshots/etch-a-sketch.png" alt="" class="portfolio__img">
-        </a> -->
-    </div>
-</section>
+                </a>
 
-         <!-- Contact me -->
-         <section class="contact-me" id="contact">
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/screenshots/tic-tac-toe.png" alt="Tic Tac Toe" class="portfolio__img">
+
+                </a>
+
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/screenshots/dashboard.png" alt="Dashboard" class="portfolio__img">
+
+                </a>
+
+
+                <a href="#" class="portfolio__item">
+                    <img src="img/screenshots/my-chrome-app.png" alt="Chrome App" class="portfolio__img">
+
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact me -->
+        <section class="contact-me" id="contact">
             <h2 class="section-title">Contact Me</h2><br>
-            <p>I am currently seeking <span>internship</span>  opportunities for 2025. <br>Feel free to reach out if you'd like to connect!</p>
+            <p>I am currently seeking <span>internship</span> opportunities for 2025. <br>Feel free to reach out if
+                you'd like to connect!</p>
             <p class="email-link"><a href="mailto:minji.kim@hyperisland.se">minji.kim@hyperisland.se</a></p>
             <ul class="social-list">
                 <li class="social-list__item">
                     <a href="https://github.com/minzikimi" target="_blank">
                         <img class="icons" src="./img/icons8-github.svg" alt="github-icon">
-                      </a>
+                    </a>
                 </li>
                 <li class="social-list__item">
                     <a href="https://www.linkedin.com/in/minji-kim-185a80315/" target="_blank">
                         <img class="icons" src="./img/icons8-linkedin.svg" alt="linkedin-icon">
-                      </a>
+                    </a>
                 </li>
                 <li class="social-list__item">
                     <a href="https://www.instagram.com/minziikim/" target="_blank">
                         <img class="icons" src="./img/icons8-instagram-96.svg" alt="instagram-icon">
-                      </a>
+                    </a>
                 </li>
             </ul>
-
-    
-           
-            <!-- <div class="btn-container">
-                <button>
-                    <img src="img/hey-svgrepo-com.svg">
-                    Say Hello</button>
-            </div> -->
         </section>
     </main>
-        
-    </div>
-    </main>
-
-
 
     <footer>
         <div>
@@ -199,8 +179,6 @@
         <div>
             <h3>Copyright @ Minji Kim</h3>
         </div>
- 
-
     </footer>
 
     <script src="index.js"></script>
