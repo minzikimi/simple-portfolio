@@ -22,7 +22,7 @@ window.onscroll = () => {
 
 
 //animation for span
-const textArray = ["detail-oriented.", "a problem solver.", "a team player.", "creative.", "patient."];
+const textArray = ["consistent.", "responsible..", "a team player.", "creative.", "detail-oriented."];
 let currentIndex = 0;
 const textElement = document.querySelector(".skills");
 let typingIndex = 0; 

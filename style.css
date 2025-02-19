@@ -360,7 +360,7 @@ header {
     background-color: none;
     color: var(--clr-dark);
     text-align: center;
-    /* border: 10px dotted var(--clr-dark); */
+    border: 10px dotted var(--clr-dark);
 }
 
 .section-title--services {
@@ -385,6 +385,17 @@ header {
 .service {
     max-width: 500px;
     margin: 0 auto;
+}
+
+.skills-icons{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    
+}
+.skills-icon{
+    width: 40px;
+    height: 40px;
 }
 
 @media (min-width: 800px) {
@@ -443,47 +454,69 @@ header {
         z-index: 2;
     }
 }
-
-/* My Work section */
-
+/* My Work */
 .my-work {
-    background-color: none;
-    color: var(--clr-dark);
+    background-color: var(--color-secondary);
+    color: var(--color-light);
     text-align: center;
-    /* border: 10px dotted var(--clr-dark); */
-}
-
-.portfolio {
+  }
+  
+  .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
+    grid-template-columns: repeat(3, 1fr); /* Explicit 3-column grid */
+    grid-gap: 1em;
 
-.portfolio__item {
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-    position: relative;
-}
-
-.portfolio__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-    opacity 250ms linear;
-}
-
-.portfolio__item:focus {
+    margin: 0 auto;
+  }
+  
+  .portfolio__item {
+    background-color: var(--color-dark);
+    overflow: hidden; /* Ensures images don't overflow */
+  }
+  
+  .portfolio__img {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1);
+    width: 100%; /* Ensures images fill the container */
+    display: block; /* Removes extra space below image */
+    height: 100%; /* Make images fill their grid cell */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+  
+  }
+  
+  .portfolio__item:focus {
     position: relative;
     z-index: 2;
-}
-
-.portfolio__img:hover,
-.portfolio__item:focus .portfolio__img {
+  }
+  
+  .portfolio__img:hover {
     transform: scale(1.2);
-    opacity: .5;
-}
+  }
+  
+  
+  .portfolio__item--tall {
+    grid-row: span 2;
+  }
+  
+  .portfolio__item--wide {
+    grid-column: span 2;
+  }
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .portfolio {
+      grid-template-columns: 1fr; 
+    }
+  
+    .portfolio__item--tall {
+      grid-row: auto; /* Reset row span */
+    }
+  
+    .portfolio__item--wide {
+      grid-column: auto; /* Reset column span */
+    }
+  }
+
+
+
 
 
 /* Contact Me Section */
@@ -494,7 +527,7 @@ header {
 
 .contact-me p {
     margin-bottom: 1em;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     span {
         background-color: var(--clr-accent);
@@ -604,6 +637,10 @@ footer {
     color: var(--clr-accent);
     margin-bottom: 0; 
     padding:3rem;
+
+    h1{
+        letter-spacing: 0.25rem;
+    }
 }
   
 
